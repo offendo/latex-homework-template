@@ -25,8 +25,8 @@
 \linespread{1.1}
 
 \pagestyle{fancy}
-\lhead{\hmwkAuthorName}
-\chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle}
+\lhead{\hwauthor}
+\chead{\hwclass\: \hwtitle}
 \rhead{\firstxmark}
 \lfoot{\lastxmark}
 \cfoot{\thepage}
@@ -52,10 +52,10 @@
 }
 
 \setcounter{secnumdepth}{0}
-\newcounter{partCounter}
-\newcounter{homeworkProblemCounter}
-\setcounter{homeworkProblemCounter}{1}
-\nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
+\newcounter{part-count}
+\newcounter{problem-count}
+\setcounter{problem-count}{1}
+\nobreak\extramarks{Problem \arabic{problem-count}}{}\nobreak{}
 
 %
 % Homework Problem Environment
@@ -65,15 +65,15 @@
 % assignment aren't sequential. See the last 3 problems of this template for an
 % example.
 %
-\newenvironment{homeworkProblem}[1][-1]{
+\newenvironment{hwproblem}[1][-1]{
     \ifnum#1>0
-        \setcounter{homeworkProblemCounter}{#1}
+        \setcounter{problem-count}{#1}
     \fi
-    \section{Problem \arabic{homeworkProblemCounter}}
-    \setcounter{partCounter}{1}
-    \enterProblemHeader{homeworkProblemCounter}
+    \section{Problem \arabic{problem-count}}
+    \setcounter{part-count}{1}
+    \enterProblemHeader{problem-count}
 }{
-    \exitProblemHeader{homeworkProblemCounter}
+    \exitProblemHeader{problem-count}
 }
 
 %
@@ -86,29 +86,16 @@
 %   - Author
 %
 
-\newcommand{\hmwkTitle}{Homework\ \#2}
-\newcommand{\hmwkDueDate}{February 12, 2014}
-\newcommand{\hmwkClass}{Calculus}
-\newcommand{\hmwkClassTime}{Section A}
-\newcommand{\hmwkClassInstructor}{Professor Isaac Newton}
-\newcommand{\hmwkAuthorName}{\textbf{Josh Davis} \and \textbf{Davis Josh}}
+\newcommand{\hwtitle}{Homework\ \#2}
+\newcommand{\hwclass}{Calculus}
+\newcommand{\hwclasstime}{Section A}
+\newcommand{\hwinstructor}{Professor Isaac Newton}
+\newcommand{\hwauthor}{Nilay Patel}
 
-%
-% Title Page
-%
-
-\title{
-    \vspace{2in}
-    \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
-    \normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate\ at 3:10pm}\\
-    \vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
-    \vspace{3in}
-}
-
-\author{\hmwkAuthorName}
+\author{\hwauthor}
 \date{}
 
-\renewcommand{\part}[1]{\textbf{\large Part \Alph{partCounter}}\stepcounter{partCounter}\\}
+\renewcommand{\part}[1]{\textbf{\large Part \Alph{part-count}}\stepcounter{part-count}\\}
 
 %
 % Various Helper Commands
@@ -136,12 +123,7 @@
 \newcommand{\Bias}{\mathrm{Bias}}
 
 \begin{document}
-
-\maketitle
-
-\pagebreak
-
-\begin{homeworkProblem}
+\begin{hwproblem}
     Give an appropriate positive constant \(c\) such that \(f(n) \leq c \cdot
     g(n)\) for all \(n > 1\).
 
@@ -209,11 +191,11 @@
 
     Thus a valid \(c\) is \(c = 2\).
 
-\end{homeworkProblem}
+\end{hwproblem}
 
 \pagebreak
 
-\begin{homeworkProblem}
+\begin{hwproblem}
     Let \(\Sigma = \{0, 1\}\). Construct a DFA \(A\) that recognizes the
     language that consists of all binary numbers that can be divided by 5.
     \\
@@ -282,9 +264,9 @@
     Therefore on state \(q_0\) or (\(x \mod 5 = 0\)), a transition line should
     go to state \(q_0\) for the input 0 and a line should go to state \(q_1\)
     for input 1. Continuing this gives us the Figure~\ref{fig:multiple5}.
-\end{homeworkProblem}
+\end{hwproblem}
 
-\begin{homeworkProblem}
+\begin{hwproblem}
     Write part of \alg{Quick-Sort($list, start, end$)}
 
     \begin{algorithm}[]
@@ -300,11 +282,11 @@
         \end{algorithmic}
         \caption{Start of QuickSort}
     \end{algorithm}
-\end{homeworkProblem}
+\end{hwproblem}
 
 \pagebreak
 
-\begin{homeworkProblem}
+\begin{hwproblem}
     Suppose we would like to fit a straight line through the origin, i.e.,
     \(Y_i = \beta_1 x_i + e_i\) with \(i = 1, \ldots, n\), \(\E [e_i] = 0\),
     and \(\Var [e_i] = \sigma^2_e\) and \(\Cov[e_i, e_j] = 0, \forall i \neq
@@ -466,11 +448,11 @@
         \end{split}
     \]
 
-\end{homeworkProblem}
+\end{hwproblem}
 
 \pagebreak
 
-\begin{homeworkProblem}
+\begin{hwproblem}
     Prove a polynomial of degree \(k\), \(a_kn^k + a_{k - 1}n^{k - 1} + \hdots
     + a_1n^1 + a_0n^0\) is a member of \(\Theta(n^k)\) where \(a_k \hdots a_0\)
     are nonnegative constants.
@@ -510,7 +492,7 @@
         where \(n_0 = 1\) and \(c_2 = A\). \(c_2\) is just a constant. Thus the
         proof is complete.
     \end{proof}
-\end{homeworkProblem}
+\end{hwproblem}
 
 \pagebreak
 
@@ -519,21 +501,22 @@
 %
 
 % Jump to problem 18
-\begin{homeworkProblem}[18]
+\begin{hwproblem}[18]
     Evaluate \(\sum_{k=1}^{5} k^2\) and \(\sum_{k=1}^{5} (k - 1)^2\).
-\end{homeworkProblem}
+\end{hwproblem}
 
 % Continue counting to 19
-\begin{homeworkProblem}
+\begin{hwproblem}
     Find the derivative of \(f(x) = x^4 + 3x^2 - 2\)
-\end{homeworkProblem}
+\end{hwproblem}
 
 % Go back to where we left off
-\begin{homeworkProblem}[6]
+\begin{hwproblem}[6]
     Evaluate the integrals
     \(\int_0^1 (1 - x^2) \dx\)
     and
     \(\int_1^{\infty} \frac{1}{x^2} \dx\).
-\end{homeworkProblem}
+\end{hwproblem}
 
 \end{document}
+
