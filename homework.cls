@@ -30,12 +30,25 @@
 
 \linespread{1.1}
 
-\pagestyle{fancy}
-\lhead{\hwauthor}
-\chead{\hwclass\: \hwtitle}
-\rhead{\firstxmark}
-\lfoot{\lastxmark}
-\cfoot{\thepage}
+% Variables to define header
+
+\def\hwtitle#1{\def\@hwtitle{#1}}
+\newcommand{\printhwtitle}{\@hwtitle}
+
+\def\hwclass#1{\def\@hwclass{#1}}
+\newcommand{\printhwclass}{\@hwclass}
+
+\def\hwauthor#1{\def\@hwauthor{#1}}
+\newcommand{\printhwauthor}{\@hwauthor}
+
+\AtBeginDocument{
+    \pagestyle{fancy}
+    \lhead{\printhwauthor}
+    \chead{\printhwclass: \printhwtitle}
+    \rhead{\firstxmark}
+    \lfoot{\lastxmark}
+    \cfoot{\thepage}
+}
 
 \renewcommand\headrulewidth{0.4pt}
 \renewcommand\footrulewidth{0.4pt}
@@ -92,13 +105,7 @@
 %   - Author
 %
 
-\newcommand{\hwtitle}[1]{Homework\ \#{#1}}
-\newcommand{\hwclass}[1]{{#1}}
-\newcommand{\hwclasstime}{Section A}
-\newcommand{\hwinstructor}{Professor Isaac Newton}
-\newcommand{\hwauthor}{Nilay Patel}
-
-\author{\hwauthor}
+\author{\printhwauthor}
 \date{}
 
 \renewcommand{\part}[1]{\textbf{\large Part \Alph{part-count}}\stepcounter{part-count}\\}

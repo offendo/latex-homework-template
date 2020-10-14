@@ -3,6 +3,30 @@ latex-homework-template
 
 [Adjusted] LaTeX file I use for math/CS homework. Forked from [jdavis](https://github.com/jdavis/latex-homework-template)
 
+
+## Usage
+In your document, place the following code (and extend as necessary):
+
+```latex
+\documentclass{homework}
+\hwauthor{Your Name}
+\hwclass{Class Name}
+\hwtitle{HW Name}
+\begin{document}
+
+% here be problems
+
+\begin{hwproblem}
+    This is the solution to problem 1.
+\end{hwproblem}
+
+\begin{hwproblem}
+    This is the solution to problem 2.
+\end{hwproblem}
+
+\end{document}
+```
+
 ## Installing
 
 1. First you'll need LaTeX. Instructions on obtaining it can be found here:
