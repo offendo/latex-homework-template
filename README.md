@@ -1,7 +1,7 @@
 latex-homework-template
 =======================
 
-[Adjusted] LaTeX file I use for math/CS homework. Forked from [jdavis](https://github.com/jdavis/latex-homework-template)
+LaTeX file I use for math/CS homework. Forked from [jdavis](https://github.com/jdavis/latex-homework-template)
 
 
 ## Usage
@@ -9,9 +9,13 @@ In your document, place the following code (and extend as necessary):
 
 ```latex
 \documentclass{homework}
+
+% Variable definitions
 \hwauthor{Your Name}
 \hwclass{Class Name}
 \hwtitle{HW Name}
+
+% Document
 \begin{document}
 
 % here be problems
@@ -34,20 +38,15 @@ This will produce
 
 ## Installing
 
-1. First you'll need LaTeX. Instructions on obtaining it can be found here:
-   http://latex-project.org/ftp.html
-2. Compiling from the command line will look like the following:
+**On Linux:** Just put the `homework.cls` file wherever your other `LaTeX` stuff is. Mine is in `~/texmf/tex/latex/commonstuff/homework.cls` for example, yours is probably similar. Here's an example:
 
-   ```bash
-   $ latexmk homework.tex
-   ```
-3. Or you can use [TeXShop][texshop] or a similar native client to typeset the
-   LaTeX file.
-
-## Credit
-
-When first starting with LaTeX, I came across [this template][credit] and used
-it as a base for starting my template. As you can see, it is pretty similar.
+```bash
+$ kpsewhich -var-value=TEXMFHOME  # this folder may not exist, no worries either way
+/home/offendo/texmf
+$ mkdir -p ~/texmf/tex/latex/commonstuff # make the folder and subfolders
+$ cp homework.cls ~/texmf/tex/latex/commonstuff/ # copy the cls file there
+```
+It's probably easier to follow whatever instructions your TeX software provides (MikTeX, TeXLive, etc.).
 
 ## License
 
@@ -55,5 +54,3 @@ This code is distributed under the MIT license. For more info, read the
 [LICENSE](/LICENSE) file distributed with the source code.
 
 [texshop]: http://pages.uoregon.edu/koch/texshop/
-[credit]: http://www.latextemplates.com/template/programming-coding-assignment
-[twitter]: https://twitter.com/jldavis
