@@ -27,6 +27,11 @@ In your document, place the following code (and extend as necessary):
 \end{document}
 ```
 
+This will produce 
+
+
+![Example output of LaTeX](./example.png)
+
 ## Installing
 
 1. First you'll need LaTeX. Instructions on obtaining it can be found here:
