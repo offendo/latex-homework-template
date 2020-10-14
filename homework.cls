@@ -71,7 +71,8 @@
 }
 
 \setcounter{secnumdepth}{0}
-\newcounter{part-count}
+\newcounter{partCount}
+\newcounter{partCountAlpha}
 \newcounter{problem-count}
 \setcounter{problem-count}{1}
 \nobreak\extramarks{Problem \arabic{problem-count}}{}\nobreak{}
@@ -89,7 +90,8 @@
         \setcounter{problem-count}{#1}
     \fi
     \section{Problem \arabic{problem-count}}
-    \setcounter{part-count}{1}
+    \setcounter{partCount}{1}
+    \setcounter{partCountAlpha}{1}
     \enterProblemHeader{problem-count}
 }{
     \exitProblemHeader{problem-count}
@@ -108,7 +110,8 @@
 \author{\printhwauthor}
 \date{}
 
-\renewcommand{\part}[1]{\textbf{\large Part \Alph{part-count}}\stepcounter{part-count}\\}
+\renewcommand{\partalpha}[1]{\textbf{\large Part \Alph{partCountAlpha}}\stepcounter{partCountAlpha}\\}
+\renewcommand{\part}[1]{\textbf{\large Part \thepartCount}\stepcounter{partCount}\\}
 
 %
 % Various Helper Commands
