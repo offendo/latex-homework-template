@@ -1,37 +1,7 @@
 latex-homework-template
 =======================
 
-The LaTeX file that I use as the base for all my homeworks in university. You should follow [me on Twitter][twitter].
-
-## Features
-
-Here are just a few features of this homework template.
-
-1. Title page.
-2. Problem markers.
-3. Configurable problem numbers (see the last 3 problems for an example).
-4. Some commonly used math macros.
-
-## Screenshots
-
-### The Cover Page:
-
-![Cover page](/images/latex1.png)
-
-### Big Oh Example Problem:
-![Example problems 1](/images/latex2.png)
-
-### Automata & Pseudocode Problems:
-![Example problems 2](/images/latex3.png)
-
-### Statistics Problem:
-![Example problems 3](/images/latex4.png)
-
-### Proof Problem:
-![Example problems 4](/images/latex5.png)
-
-### Adjustable Problem Numbers
-![Example problem numbering](/images/latex6.png)
+[Adjusted] LaTeX file I use for math/CS homework. Forked from [jdavis](https://github.com/jdavis/latex-homework-template)
 
 ## Installing
 
