@@ -9,9 +9,13 @@ In your document, place the following code (and extend as necessary):
 
 ```latex
 \documentclass{homework}
+
+% Variable definitions
 \hwauthor{Your Name}
 \hwclass{Class Name}
 \hwtitle{HW Name}
+
+% Document
 \begin{document}
 
 % here be problems
